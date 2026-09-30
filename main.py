@@ -19,6 +19,7 @@ def get_connection():
         sslmode="require",
         channel_binding="require"
     )
+##
 
 # =========================================================
 # ENDPOINT 1 - LOGIN
