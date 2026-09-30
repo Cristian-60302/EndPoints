@@ -10,15 +10,15 @@ load_dotenv()
 app = Flask(__name__)
 
 
-# =========================================================
-# CONEXIÓN A NEON / POSTGRESQL
-# =========================================================
-
 def get_connection():
     return psycopg2.connect(
-        os.getenv("DATABASE_URL")
+        host="ep-raspy-scene-b4o7810q-pooler.c-6.us-east-2.aws.neon.tech",
+        database="neondb",
+        user="neondb_owner",
+        password="npg_VZ5WOEoTB2CA",
+        sslmode="require",
+        channel_binding="require"
     )
-
 
 # =========================================================
 # ENDPOINT 1 - LOGIN
